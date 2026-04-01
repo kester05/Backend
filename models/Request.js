@@ -43,6 +43,20 @@ const requestSchema = new mongoose.Schema({
     ref: "User",
     default: null,
   },
+  assignedDriverId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Driver",
+    default: null,
+  },
+  assignedAt: {
+    type: Date,
+    default: null,
+  },
+  deliveryId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Delivery",
+    default: null,
+  },
 });
 
 module.exports = mongoose.model("Request", requestSchema);

@@ -18,6 +18,10 @@ connectDB();
 app.use("/api/auth", require("./routes/authRoutes"));
 app.use("/api/items", require("./routes/itemRoutes"));
 app.use("/api/requests", require("./routes/requestRoutes"));
+app.use("/api/drivers", require("./routes/driverRoutes"));
+app.use("/api/locations", require("./routes/locationRoutes"));
+app.use("/api/deliveries", require("./routes/deliveryRoutes"));
+app.use("/api/notifications", require("./routes/notificationRoutes"));
 
 // Error handling middleware
 app.use((err, req, res, next) => {
